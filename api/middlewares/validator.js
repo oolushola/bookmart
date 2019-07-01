@@ -19,9 +19,7 @@ class Validator {
                     error: err.message.replace(/['"]/g, ''),
                 })
             }
-            else{ 
-                return next();
-            }
+            return next()
         }) 
     }
 
