@@ -1,5 +1,5 @@
 import Joi from 'joi';
-import _ from 'lodash';
+import response from '../middlewares/response';
 
 class Validator {
     static validateUserSignUp(req, res, next) {
