@@ -1,5 +1,5 @@
 import Joi from 'joi';
-import _ from 'lodash';
+import response from '../middlewares/response';
 
 class Validator {
     static validateUserSignUp(req, res, next) {
@@ -14,14 +14,11 @@ class Validator {
         Joi.validate(data, schema, (err, value) => {
             if(err)
             {
-                return res.status(422).send({
-                    status: 422,
-                    error: err.message.replace(/['"]/g, ''),
-                })
+                return response.errorResponse(
+                    res, 422, err.message.replace(/['"]/g, '')
+                )
             }
-            else{ 
-                return next();
-            }
+            return next();
         }) 
     }
 
@@ -34,10 +31,9 @@ class Validator {
 
         Joi.validate(data, schema, (err) => {
             if(err) {
-                return res.status(422).send({
-                    status: 422,
-                    error:err.message.replace(/['"]/g, ''),
-                });
+                return response.errorResponse(
+                    res, 422, err.message.replace(/['"]/g, '')
+                )
             }
             return next();
         })
@@ -55,10 +51,9 @@ class Validator {
 
         Joi.validate(data, schema, (err) => {
             if(!err) return next(); 
-            res.status(422).send({
-                status: 422,
-                error: err.message.replace(/['"]/g, ''),
-            })
+            return response.errorResponse(
+                res, 422, message.replace(/['"]/g, '')
+            )
         })
     }
 
@@ -70,11 +65,9 @@ class Validator {
 
         Joi.validate(data, schema, (err) => {
             if(!err) return next();
-            
-            return res.status(422).send({
-                status: 422,
-                error: err.message.replace(/['"]/g, ''),                
-            });
+            return response.errorResponse(
+                res, 422, err.message.replace(/['"]/g, '')
+            )            
         })
     }
 
@@ -90,10 +83,9 @@ class Validator {
         
         Joi.validate(data, schema, err => {
             if(!err) return next();
-            res.status(422).send({
-                status: 422,
-                error: err.message.replace(/['"]/g, ''),
-            })
+            return response.errorResponse(
+                res, 422, message.replace(/['"]/g, '')
+            )
         })
     }
 }
