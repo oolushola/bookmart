@@ -14,12 +14,11 @@ class Validator {
         Joi.validate(data, schema, (err, value) => {
             if(err)
             {
-                return res.status(422).send({
-                    status: 422,
-                    error: err.message.replace(/['"]/g, ''),
-                })
+                return response.errorResponse(
+                    res, 422, err.message.replace(/['"]/g, '')
+                )
             }
-            return next()
+            return next();
         }) 
     }
 
@@ -32,10 +31,9 @@ class Validator {
 
         Joi.validate(data, schema, (err) => {
             if(err) {
-                return res.status(422).send({
-                    status: 422,
-                    error:err.message.replace(/['"]/g, ''),
-                });
+                return response.errorResponse(
+                    res, 422, err.message.replace(/['"]/g, '')
+                )
             }
             return next();
         })
@@ -53,10 +51,9 @@ class Validator {
 
         Joi.validate(data, schema, (err) => {
             if(!err) return next(); 
-            res.status(422).send({
-                status: 422,
-                error: err.message.replace(/['"]/g, ''),
-            })
+            return response.errorResponse(
+                res, 422, message.replace(/['"]/g, '')
+            )
         })
     }
 
@@ -68,11 +65,9 @@ class Validator {
 
         Joi.validate(data, schema, (err) => {
             if(!err) return next();
-            
-            return res.status(422).send({
-                status: 422,
-                error: err.message.replace(/['"]/g, ''),                
-            });
+            return response.errorResponse(
+                res, 422, err.message.replace(/['"]/g, '')
+            )            
         })
     }
 
@@ -88,10 +83,9 @@ class Validator {
         
         Joi.validate(data, schema, err => {
             if(!err) return next();
-            res.status(422).send({
-                status: 422,
-                error: err.message.replace(/['"]/g, ''),
-            })
+            return response.errorResponse(
+                res, 422, message.replace(/['"]/g, '')
+            )
         })
     }
 }
