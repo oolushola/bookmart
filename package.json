@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "create": "babel-node api/database/create-tables",
-    "drop": "babel-node api/database/droptables",
+    "drop": "babel-node api/database/drop-tables",
     "test": "cross-env NODE_ENV=test nyc --require @babel/register  mocha api/test/*.js --exit",
     "start": "babel-node api/app.js",
     "serve": "babel-watch api/app.js",
