@@ -6,7 +6,7 @@ import '@babel/polyfill';
 dotenv.config();
 
 const pool = new Pool({
-    connectionString: process.env.CONNINFO
+    connectionString: process.env.DATABASE_URL
 });
     
 
