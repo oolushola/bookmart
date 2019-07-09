@@ -3,7 +3,6 @@ import validator from '../middlewares/validator';
 import token from '../middlewares/auth';
 import usersController from '../controllers/usersController';
 
-
 const routes = Router();
 
 routes.get('/', usersController.index);
@@ -37,6 +36,11 @@ routes.put('/update/book/:bookId',
     validator.validateUpdateBook,
     usersController.updateBook
 );
+
+routes.delete('/delete/book/:id',
+    token.checker,
+    usersController.deleteBook
+)
 
 
 export default routes;

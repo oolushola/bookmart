@@ -1,27 +1,27 @@
 const users = [
     {
-        "id": 1,
-        "email": "odejobiolushola@gmail.com",
-        "fullname": "Odejobi Olushola D.",
-        "password": "$2b$08$LdeeawiN6ybG33r/HMq0pON3uA0.GWyJ3gIa1GfA72FpViTXTYLBO",
-        "address": "Abule egba",
-        "phoneNumber": "08022440810"
+        fullname: '\'Odejobi Olushola D.\'',
+        email: '\'odejobiolushola@gmail.com\'',
+        password: '\'$2b$08$RufVP6bRRiAcjsau7yZ4t.I6jgE9OdLyq1R0IH69rVsH65X8Z.t7O\'',
+        address: '\'Abule egba\'',
+        phoneNumber: '\'08022440810\'',
+        photo: '\'\''
     },
     {
-        "id": 2,
-        "email": "odejobiolushola@yahoo.com",
-        "fullname": "Odejobi Seye ",
-        "password": "$2b$08$xgHl4kz1ZqMmJRf.NlMA1ezBtc1CEt2t6REZI/YNuamnYYCOdmLpe",
-        "address": "Abule egba",
-        "phoneNumber": "08073591289" 
+        fullname: '\'Odejobi Seye\'',
+        email: '\'odejobiolushola@yahoo.com\'',
+        password: '\'$2b$08$RufVP6bRRiAcjsau7yZ4t.I6jgE9OdLyq1R0IH69rVsH65X8Z.t7O\'',
+        address: '\'Abule egba\'',
+        phoneNumber: '\'08073591289\'',
+        photo: '\'\''
     },
     {
-        "id": 3,
-        "email": "odejobiolushola@hotmail.com",
-        "fullname": "Babalola D.",
-        "password": "$2b$08$44.U6WvsEHY.3Z/NB53FUO6HeVgEzEP78mKuDAeEvK/WSpgQjoC4W",
-        "address": "Abule egba",
-        "phoneNumber": "08022440810"
+        fullname: '\'Babalola D\'',
+        email: '\'odejobiolushola@hotmail.com\'',
+        password: '\'$2b$08$RufVP6bRRiAcjsau7yZ4t.I6jgE9OdLyq1R0IH69rVsH65X8Z.t7O\'',
+        address: '\'Abule egba\'',
+        phoneNumber: '\'08028955866\'',
+        photo: '\'\''
     }
 ];
 

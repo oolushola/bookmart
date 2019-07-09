@@ -21,18 +21,18 @@
      * @param { String } token : (Optional) 
      */
 
-    static successResponse(res, code, description, payload, token) {
+    static successResponse(res, code, description, payload, optional) {
         res.status(code).json({
             status: code,
             message: description,
             data: payload,
-            token
+            averageRating:optional
         })
     }
 
     /**
      * @description Error response. This method
-     * will be invoked with a status code of 401 || 409 || 422 || 500 || 403
+     * will be invoked with a status code of 401 || 409 || 422 || 500 || 403 || 400 || 404
      * 
      * @param { Object } res The express response Object
      * @param { Integer } code 

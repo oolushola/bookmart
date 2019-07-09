@@ -1,33 +1,28 @@
 const ratings = [
     {
-        "id": 1,
-        "bookId": 2,
-        "ratings": 3,
-        "userId": 1
+        bookid: 2,
+        rating: 3,
+        userid: 1
     },
     {
-        "id": 2,
-        "bookId": 2,
-        "ratings": 1,
-        "userId": 2,
+        bookid: 2,
+        rating: 1,
+        userid: 2,
     },
     {
-        "id": 3,
-        "bookId": 2,
-        "ratings": 4,
-        "userId": 3
+        bookid: 2,
+        rating: 4,
+        userid: 3
     },
     {
-        "id": 4,
-        "bookId": 8,
-        "ratings": 1,
-        "userId": 1
+        bookid: 8,
+        rating: 1,
+        userid: 1
     },
     {
-        "id": 5,
-        "bookId": 7,
-        "ratings": 4,
-        "userId": 2
+        bookid: 7,
+        rating: 4,
+        userid: 2
     },
 ];
 

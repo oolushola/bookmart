@@ -5,10 +5,10 @@ class Validator {
     static validateUserSignUp(req, res, next) {
         const data  = req.body;
         const schema = Joi.object().keys({
+            fullName: Joi.string().required().regex(/^[A-Z]+ [A-Z]+$/i),
             email: Joi.string().required().email(),
-            fullname: Joi.string().required().regex(/^[A-Z]+ [A-Z]+$/i),
             password: Joi.string().regex(/^[a-zA-Z0-9]{6,80}$/).required(),
-            address: Joi.string(),
+            address: Joi.string().required(),
             phoneNumber: Joi.string().regex(/^\d{4}-\d{3}-\d{4}$/).required(),
         });
         Joi.validate(data, schema, (err, value) => {
@@ -52,7 +52,7 @@ class Validator {
         Joi.validate(data, schema, (err) => {
             if(!err) return next(); 
             return response.errorResponse(
-                res, 422, message.replace(/['"]/g, '')
+                res, 422, err.message.replace(/['"]/g, '')
             )
         })
     }
@@ -84,7 +84,7 @@ class Validator {
         Joi.validate(data, schema, err => {
             if(!err) return next();
             return response.errorResponse(
-                res, 422, message.replace(/['"]/g, '')
+                res, 422, err.message.replace(/['"]/g, '')
             )
         })
     }
